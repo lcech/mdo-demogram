@@ -1,8 +1,8 @@
 /*global digitalData,YT*/
 var digitalData = digitalData || {};
-digitalData._log = digitalData._log || [];
 var dataLayer = dataLayer || [];
 dataLayer.push(digitalData);
+digitalData._log = digitalData._log || [];
 
 var debug = function () {
   if (! window.console || ! console.log) {
