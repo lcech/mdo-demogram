@@ -280,7 +280,7 @@ window.btoa = window.btoa || function () {
     });
   })
   
-  $('a[data-toggle="collapse"]').on('shown.bs.tab', function (e) {
+  $('a[data-toggle="collapse"]').on('shown.bs.collapse', function (e) {
     measure({
       event: "faqTabClick",
       faqTabName: $(e.target).text().trim()
