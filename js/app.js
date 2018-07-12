@@ -279,5 +279,12 @@ window.btoa = window.btoa || function () {
       tabName: $(e.target).text().trim()
     });
   })
+  
+  $('a[data-toggle="collapse"]').on('shown.bs.tab', function (e) {
+    measure({
+      event: "faqTabClick",
+      faqTabName: $(e.target).text().trim()
+    });
+  })
 
 })(jQuery);
