@@ -280,10 +280,11 @@ window.btoa = window.btoa || function () {
     });
   })
   
-  $('a[data-toggle="collapse"]').on('shown.bs.collapse', function (e) {
+  $('.panel').on('shown.bs.collapse', function (e) {
+	var faqText = $(e.currentTarget).text().trim();
     measure({
       event: "faqTabClick",
-      faqTabName: $(e.target).text().trim()
+      faqTabName: faqText.substring(0,faqText.indexOf("?")+1)
     });
   })
 
